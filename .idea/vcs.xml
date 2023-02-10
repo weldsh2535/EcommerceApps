@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/API" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Git" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Kotlin_Program_Practical" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WeldshAweke.com" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/drsane_gebrial/dirsane_gebriel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/instagramUI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactJSProject/myapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactJSProject/portfolio-you-project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/travelerApp" vcs="Git" />
+  </component>
+</project>
