@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
@@ -10,15 +11,17 @@
     android:id="@+id/appbarlayout"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/white">
+    android:backgroundTint="@color/white"
+    android:layout_margin="6dp">
     <LinearLayout
         android:id="@+id/tabLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="6dp"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="358dp"
+            android:layout_width="338dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -37,8 +40,8 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="51dp"
-            android:layout_height="51dp"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
             android:layout_toEndOf="@+id/tabLayout"
             android:src="@drawable/image1" />
     </LinearLayout>
@@ -108,10 +111,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_margin="6dp"
         android:layout_below="@+id/baneerCard">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
             android:text="Shocking Sale"
             android:textColor="@color/black"
             android:textStyle="bold"/>

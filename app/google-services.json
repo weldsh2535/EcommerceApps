@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923997425849",
+    "project_id": "ecommerce-506a9",
+    "storage_bucket": "ecommerce-506a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923997425849:android:cd7e9f528378b7ca510b68",
+        "android_client_info": {
+          "package_name": "com.weldsh2535.ecommerceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923997425849-8btl7lftgpgcf10rflcjl9gfecu46r5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUOvEUv7Zvg2F3tRR8J3_PTpHp3a9aFj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923997425849-8btl7lftgpgcf10rflcjl9gfecu46r5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

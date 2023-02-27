@@ -1,5 +1,6 @@
 package com.weldsh2535.ecommerceapp.ui.shop
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.weldsh2535.ecommerceapp.databinding.FragmentShopBinding
+import com.weldsh2535.ecommerceapp.ui.CartActivity
 
 class ShopFragment : Fragment() {
 
@@ -32,6 +34,12 @@ class ShopFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
+
+        binding.layout2.setOnClickListener {
+            val intent = Intent(context,CartActivity::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
 

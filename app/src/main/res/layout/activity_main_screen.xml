@@ -10,6 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="403dp"
         android:layout_height="435dp"
+        android:padding="22dp"
         app:srcCompat="@drawable/setupimage" />
 
     <TextView
@@ -47,17 +48,20 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textAllCaps="false"
+            android:background="@drawable/button_border"
             android:backgroundTint="@color/greens"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignup"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginLeft="52dp"
             android:text="Sign Up"
             android:textStyle="bold"
             android:backgroundTint="@color/white"
             android:textColor="@color/greens"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
     </LinearLayout>
 </RelativeLayout>
