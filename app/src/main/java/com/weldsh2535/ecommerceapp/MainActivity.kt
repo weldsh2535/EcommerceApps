@@ -3,12 +3,11 @@ package com.weldsh2535.ecommerceapp
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.weldsh2535.ecommerceapp.Adapter.UserAdapter
@@ -19,7 +18,6 @@ import com.weldsh2535.ecommerceapp.Model.getId
 import com.weldsh2535.ecommerceapp.ViewModel.UserViewModel
 import com.weldsh2535.ecommerceapp.databinding.ActivityMainBinding
 import java.util.*
-import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
 
@@ -124,13 +122,6 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
 
     }
 
-    override fun onClick(item: User, position: Int) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onDelete(item: User, position: Int) {
-        TODO("Not yet implemented")
-    }
 
 /*    private fun initViewModel() {
         productViewModel.createLiveData.observe(this, {
@@ -205,20 +196,19 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
         name.text = null
         price.text = null
         description.text = null
-    }
-
-    override fun onClick(item: Product, position: Int) {
-        selected = item
-        selected.update_date = Timestamp.now()
-
-        name.setText(selected.name)
-        price.setText(selected.price.toString())
-        description.setText(selected.description)
-    }
-
-    override fun onDelete(item: Product, position: Int) {
-        productViewModel.delete(item.id!!)
     }*/
+
+    override fun onClick(item: User, position: Int) {
+        selected = item
+       // selected.registeredAt =
+
+      /*  name.setText(selected.name)
+        price.setText(selected.price.toString())
+        description.setText(selected.description)*/
+    }
+
+    override fun onDelete(item: User, position: Int) {
+        userViewModel.delete(item.id!!)
+    }
 }
 
-}
