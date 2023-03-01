@@ -16,7 +16,11 @@
         android:name="com.weldsh2535.ecommerceapp.ui.shop.ShopFragment"
         android:label="@string/title_shop"
         tools:layout="@layout/fragment_shop" />
-
+    <fragment
+        android:id="@+id/navigation_post"
+        android:name="com.weldsh2535.ecommerceapp.ui.post.PostFragment"
+        android:label="@string/title_post"
+        tools:layout="@layout/fragment_post" />
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.weldsh2535.ecommerceapp.ui.notifications.NotificationsFragment"

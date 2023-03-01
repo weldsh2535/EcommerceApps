@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
         initElement()
        // initViewModel()
 
-        //initialize cloud firestore
+   /*     //initialize cloud firestore
         val db = Firebase.firestore
         // Create a new user with a first and last name
         var users = User(
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
             .addOnFailureListener { e ->
                 Log.w("TAG", "Error adding documnet", e)
             }
-
+*/
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -122,21 +122,21 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
 
     }
 
-
-/*    private fun initViewModel() {
-        productViewModel.createLiveData.observe(this, {
+/*
+   private fun initViewModel() {
+        userViewModel.createLiveData.observe(this, {
             onCreate(it)
         })
 
-        productViewModel.updateLiveData.observe(this, {
+       userViewModel.updateLiveData.observe(this, {
             onUpdate(it)
         })
 
-        productViewModel.deleteLiveData.observe(this, {
+       userViewModel.deleteLiveData.observe(this, {
             onDelete(it)
         })
 
-        productViewModel.getListLiveData.observe(this, {
+       userViewModel.getListLiveData.observe(this, {
             onGetList(it)
         })
     }
@@ -162,36 +162,22 @@ class MainActivity : AppCompatActivity(),UserAdapter.OnItemClickListener {
         }
     }
 
-    private fun onGetList(it: List<Product>) {
+    private fun onGetList(it: List<User>) {
         list = ArrayList()
         list.addAll(it)
 
-        productAdapter = ProductAdapter(list, this)
+        userAdapter = UserAdapter(list, this)
 
-        rvList.adapter = productAdapter
+        rvList.adapter = userAdapter
         rvList.layoutManager = LinearLayoutManager(baseContext)
 
         productAdapter.notifyDataSetChanged()
     }
 
-    private fun create() {
-        val product = Product(
-            selected.id,
-            name.text.toString(),
-            price.text.toString().toDouble(),
-            description.text.toString(),
-            selected.create_date ?: Timestamp.now(),
-            selected.update_date
-        )
-        if (product.id != null) {
-            productViewModel.update(product)
-        } else {
-            productViewModel.create(product)
-        }
-    }
+
 
     private fun resetText() {
-        selected = Product()
+        selected = User()
 
         name.text = null
         price.text = null

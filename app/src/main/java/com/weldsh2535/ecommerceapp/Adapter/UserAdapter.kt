@@ -26,7 +26,7 @@ class UserAdapter(
             itemView.apply {
                 nameText.text = user.firstName
                 priceText.text = "${user.lastName} Bath"
-                descriptionText.text = user.middleName
+                descriptionText.text = user.email
                 createDateText.text = user.registeredAt!!.toString()
 
                 if (user.registeredAt != null) {

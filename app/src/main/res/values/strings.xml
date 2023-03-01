@@ -4,12 +4,19 @@
     <string name="title_shop">Shop</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
+    <string name="title_post">Post</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="signin">Sign In</string>
     <string name="signUp">Sign Up</string>
 
     <string name="first_fragment">First Fragment</string>
     <string name="second_fragment">Second Fragment</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="ok_button_title">button title</string>
+    <string name="take_picture_description">take picture description</string>
+    <string name="add_product">Add Product</string>
 
 
 </resources>

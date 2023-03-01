@@ -10,34 +10,24 @@ import kotlin.random.nextInt
 data class User(
     var id: String = getId(),
     var firstName: String? = null,
-    var middleName: String? = null,
     var lastName: String? = null,
     var mobile: String? = null,
+    var userName: String? = null,
     var email: String? = null,
-    var passwordHash: String? = null ,
-    var admin: String? = null,
-    var vendor: String? = null,
-    var registeredAt: Date,
-    var lastLogin: Date,
-    var intro: String? = null,
-    var profile: String? = null
+    var registeredAt: String? = null,
+    var lastLogin: String? = null
 ){
     @Exclude
     fun toMap():Map<String,Any?>{
         return mapOf(
             "id" to getId(),
             "firstName" to firstName,
-            "middleName" to middleName,
             "lastName" to lastName,
             "moblie" to mobile,
+            "userName" to userName,
             "email" to email,
-            "passwordHash" to passwordHash,
-            "admin" to admin,
-            "vendor" to vendor,
             "registeredAt" to registeredAt,
-            "lastLogin" to lastLogin,
-            "intro" to intro,
-            "profile" to profile
+            "lastLogin" to lastLogin
         )
     }
 }

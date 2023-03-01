@@ -63,19 +63,16 @@ class UserViewModel:ViewModel() {
         docRef.get().addOnSuccessListener {
             val users = ArrayList<User>()
             for (item in it.documents){
-                val users = User()
-                users.id = item.id
-                users.firstName = item.data!!["firstName"] as String?
-                users.middleName = item.data!!["middleName"] as String?
-                users.lastName = item.data!!["lastName"] as String?
-                users.email = item.data!!["email"] as String?
-                users.mobile = item.data!!["moblie"] as String?
-                users.admin = item.data!!["admin"] as String?
-                users.registeredAt = item.data!!["registeredAt"] as Date
-                users.lastLogin = item.data!!["lastLogin"] as Date
-                users.intro = item.data!!["intro"] as String?
-                users.vendor = item.data!!["vendor"] as String?
-                users.passwordHash = item.data!!["passwordHash"] as String?
+                val user = User()
+                user.id = item.id
+                user.firstName = item.data!!["firstName"] as String?
+                user.lastName = item.data!!["lastName"] as String?
+                user.userName = item.data!!["userName"] as String?
+                user.email = item.data!!["email"] as String?
+                user.mobile = item.data!!["moblie"] as String?
+                user.registeredAt = item.data!!["registeredAt"] as String
+                user.lastLogin = item.data!!["lastLogin"] as String
+                users.add(user)
             }
             getListLiveData.postValue(users)
         }.addOnFailureListener {

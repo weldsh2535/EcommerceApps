@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SignIn.LoginFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +41,38 @@
             android:textStyle="bold"
             />
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstNameContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="13dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="First Name"
+                android:inputType="text"
+                android:lines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastnameContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="13dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:lines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usernameContainer"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
@@ -51,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Username"
-                android:inputType="number"
+                android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -67,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Email"
-                android:inputType="number"
+                android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -79,11 +113,11 @@
             android:layout_marginTop="13dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phone"
+                android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Phone Number"
-                android:inputType="number"
+                android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -99,11 +133,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Password"
-                android:inputType="number"
+                android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
+       <TextView
+           android:id="@+id/registerDate"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/lastloginDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin1"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="12dp"
@@ -177,11 +220,8 @@
             android:text="Log In with Apple "
             android:backgroundTint="@color/white"
             android:drawableLeft="@drawable/appleicon"/>
-
-
     </LinearLayout>
-
-
+    </ScrollView>
 
 
 </FrameLayout>
